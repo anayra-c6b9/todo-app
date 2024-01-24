@@ -1,2 +1,5 @@
 <app-search-bar></app-search-bar>
-<app-todo-list></app-todo-list>
+<app-todo-list
+  [todoData]="todoData"
+  (emitTask)="showNewTodoData($event)"
+></app-todo-list>

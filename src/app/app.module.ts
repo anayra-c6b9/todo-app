@@ -6,6 +6,8 @@ import { AppHeaderComponent } from './app-header/app-header.component';
 import { AppContentComponent } from './app-content/app-content.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { TaskListItemComponent } from './task-list-item/task-list-item.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,13 +15,11 @@ import { TodoListComponent } from './todo-list/todo-list.component';
     AppHeaderComponent,
     AppContentComponent,
     SearchBarComponent,
-    TodoListComponent
+    TodoListComponent,
+    TaskListItemComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-}
+export class AppModule {}

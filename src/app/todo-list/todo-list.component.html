@@ -1,6 +1,24 @@
 <section
   class="container-fluid justify-content-center add-task-container px-3 mx-auto mt-4"
 >
+  <ng-template [ngIf]="todoData.length" [ngIfElse]="noTodoData">
+    <form action="#">
+      <ul class="list-group mb-4">
+        <ng-template
+          ngFor
+          let-todoItem
+          [ngForOf]="todoData"
+          let-i="index"
+          [ngForTrackBy]="trackByTodoId"
+        >
+        </ng-template>
+      </ul>
+      <button class="btn btn-danger">Delete</button>
+    </form>
+  </ng-template>
+  <ng-template #noTodoData>
+    <div>Sorry!! No tasks Added</div>
+  </ng-template>
   <form action="#">
     <ul class="list-group mb-4">
       <li class="list-group-item">
