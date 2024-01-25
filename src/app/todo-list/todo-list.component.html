@@ -14,7 +14,7 @@
           <app-task-list-item [taskId]="todoItem.id" [taskData]="todoItem.task" (emitDelete)="deleteSingle($event)" (emitCheck)="checkTaskHandler($event)" (emitUncheck)="uncheckTaskHandler($event)" ></app-task-list-item>
         </ng-template> 
       </ul>
-      <button class="btn btn-danger" type="submit">elete</button>
+      <button class="btn btn-danger" type="submit">Delete</button>
     </form>
   </ng-template>
   <ng-template #noTodoData>
