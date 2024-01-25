@@ -30,7 +30,7 @@ export class AppComponent {
     this.todoData = this.todoData.filter((data) => data.id !== id);
   };
 
-  removeBultFromList = (idList: Array<String>) => {
+  removeBulkFromList = (idList: Array<String>) => {
     this.todoData = this.todoData.filter((data) => !idList.includes(data.id));
   };
 }

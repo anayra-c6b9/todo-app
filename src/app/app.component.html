@@ -1,2 +1,2 @@
 <app-header [title]="appTitle"></app-header>
-<app-content [todoData]="todoData"></app-content>
+<app-content [todoData]="todoData" (emitTaskData)="addToList($event)" (emitDeleteTask)="removeFromList($event)" (emitDeleteBulk)="removeBulkFromList($event)"></app-content>

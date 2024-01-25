@@ -8,7 +8,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class SearchBarComponent {
   @Output() emitTask: EventEmitter<String> = new EventEmitter();
 
-  addNewTask = () => {
-    this.emitTask.emit('Hello World');
+  addNewTask = (event: any) => {
+    const task = event.target[0].form[0].value;
+    if(!task.trim().length) return
+
+    this.emitTask.emit(task);
+    event.target[0].form[0].value = ""
   };
 }

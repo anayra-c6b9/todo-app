@@ -1,5 +1,8 @@
-<app-search-bar></app-search-bar>
+<app-search-bar
+(emitTask)="showNewTodoData($event)"
+></app-search-bar>
 <app-todo-list
   [todoData]="todoData"
-  (emitTask)="showNewTodoData($event)"
+  (emitDeleteTask)="deleteSingleTask($event)"
+  (emitDeleteBulk)="deleteBulkTask($event)"
 ></app-todo-list>
